@@ -1,10 +1,17 @@
-// import { Manager, Engineer, Intern } from "./roles/allroles.js"
-const Manager = "./roles/Manager";
-const Engineer = "./roles/Engineer";
-const Intern = "./roles/Intern";
+
+const Manager = require("./lib/Manager.js");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
+
+
+
+const OUTPUT_DIR = path.resolve(__dirname, "output");
+const outputPath = path.join(OUTPUT_DIR, "team.html");
+
+const render = require("./lib/htmlRenderer");
 
 const questions = [
   {
@@ -72,7 +79,7 @@ const generateTeam = () => {
               ans1.name,
               ans1.id,
               ans1.email,
-              ans1.role,
+              // ans1.role,
               ans2.officeNumber
             );
             team.push(manager);
@@ -83,7 +90,7 @@ const generateTeam = () => {
               ans1.name,
               ans1.id,
               ans1.email,
-              ans1.role,
+              // ans1.role,
               ans2.github
             );
             team.push(engineer);
@@ -94,7 +101,7 @@ const generateTeam = () => {
               ans1.name,
               ans1.id,
               ans1.email,
-              ans1.role,
+              // ans1.role,
               ans2.school
             );
             team.push(intern);
