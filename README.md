@@ -8,3 +8,6 @@ Team Generator is a backend web application that takes command line data for tea
 
 ## Made With
 Made with love with nodejs ( [inquirer](https://www.npmjs.com/package/inquirer) )
+
+## Sample Image
+![sample image](https://github.com/jakeadelman/Team-Generator/blob/master/screenshot.png)
